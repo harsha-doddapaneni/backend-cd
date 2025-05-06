@@ -6,7 +6,7 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
         //retry(1)
-    }
+    } 
     parameters{
         choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'uat', 'pre-prod', 'prod'], description: 'Select your Environment')
         string(name: 'version',  description: 'Enter your application version')
