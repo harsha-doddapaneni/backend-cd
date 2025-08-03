@@ -44,6 +44,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Check JIRA'){
             when {
                 expression {params.ENVIRONMENT == 'prod'}
@@ -72,7 +73,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always{
             echo "This sections runs always"
